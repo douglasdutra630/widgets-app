@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 export default class Home extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       message: "Welcome to Ryan's Torture Exercise! Pick a link!"
     };
@@ -10,7 +10,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="App">
-        <h1>{this.state.pushme}</h1>
+        <h1>{this.state.message}</h1>
     </div>
     );
   }

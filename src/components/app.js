@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom"
 
+import Home from "./home";
 import Counter from "./counter";
 import Greeting from "./greeting";
 import HideShow from "./hideShow";
@@ -14,7 +15,9 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
+      
         <BrowserRouter>
+        <div>
           <div className="links-wrapper">
             <NavLink to="/">
               Home
@@ -37,7 +40,7 @@ export default class App extends Component {
             <NavLink to="/clock">
               Clock
             </NavLink>
-            <NavLink to="color/">
+            <NavLink to="/color">
               Color Changer
             </NavLink>
           </div>
@@ -51,6 +54,7 @@ export default class App extends Component {
             <Route path="/clock" component={Clock} />
             <Route path="/color" component={ColorChanger} />
           </Switch>
+          </div>
         </BrowserRouter>
       </div>
     );
